@@ -1,3 +1,13 @@
+
+ # Define the aws_iam_policy_document data source
+data "aws_iam_policy_document" "sample" {
+  statement {
+    actions = ["s3:ListBucket"]
+    resources = ["*"]
+  }
+}
+
+# Module block referencing the declared data source
 module "iam_group_with_policies" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-group-with-policies"
 
@@ -21,3 +31,4 @@ module "iam_group_with_policies" {
     }
   ]
 }
+
