@@ -9,7 +9,7 @@ module "iam_assumable_role_with_oidc" {
     Role = "role-with-oidc"
   }
 
-  provider_url = "oidc.eks.us-east-1.amazonaws.com/id/BA9E170D464AF7B92084EF72A69B9DC8"
+  provider_url = "oidc.eks.eu-west-1.amazonaws.com/id/BA9E170D464AF7B92084EF72A69B9DC8"
 
   role_policy_arns = [
     "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
